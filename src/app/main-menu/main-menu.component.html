@@ -1,0 +1,22 @@
+<section>
+    <h1>Welcome to Music Player</h1>
+
+    <div class="outer">
+        <h2>جدید ترین ها</h2>
+        <ul>
+            <li *ngFor="let item of Songs">
+                <div class="inner" [id]="item.id">
+                    <img [id]="item.id" [src]="item.cover">
+                    <span>
+                        <h4 [id]="item.id" style="--i:1"> نام آهنگ : {{item.title}}</h4>
+                        <br>
+                        <h4 style="--i:2"> خواننده : {{item.artistName}}</h4>
+                        <br>
+                        <h4 style="--i:3"> مدت زمان : {{item.durationStr}}</h4>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+

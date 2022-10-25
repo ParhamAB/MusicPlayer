@@ -1,0 +1,28 @@
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <ul>
+        <li *ngFor="let item of Songs">
+            <div class="container-custom" [id]="item.id">
+                <img class="cover" [id]="item.id" [src]="item.cover">
+                <img class="icon" [id]="item.id" [src]="item.cover">
+                <h2 [id]="item.id" style="--i:1"> نام آهنگ : {{item.title}}</h2>
+                <h2 style="--i:2"> خواننده : {{item.artistName}}</h2>
+                <h2 style="--i:3"> مدت زمان : {{item.durationStr}}</h2>
+                <span style="--i:4">
+                    <mat-icon>favorite</mat-icon>
+                    <h3>{{item.like}}</h3>
+                </span>
+                <span class="flex-custom" style="--i:6;width: 80%;height: fit-content;">
+                    <button style="--j:1;width: 30%;border-radius: 30px;background-color: aqua;" [cdkCopyToClipboard]="item.shareLink" (click)="alert()">
+                        <mat-icon>share</mat-icon>
+                    </button>
+                    <button style="--j:2;width: 30%;border-radius: 30px;background-color: rgb(250, 85, 250);">
+                        <mat-icon style="color: rgb(50, 241, 255);">play_circle_filled</mat-icon>
+                    </button>
+                </span>
+                
+            </div>
+        </li>
+    </ul>
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="line-scale-party">
+    </ngx-spinner>
+</div>

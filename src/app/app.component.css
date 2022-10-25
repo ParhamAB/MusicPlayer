@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+    height: 100%;
+}
+
+.example-sidenav {
+    position: fixed;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #121212;
+    color: white;
+}
+
+mat-toolbar{
+    position: fixed;
+    z-index: 10;
+}

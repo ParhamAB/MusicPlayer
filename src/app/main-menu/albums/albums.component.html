@@ -1,0 +1,18 @@
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <ul>
+        <!-- lIST Of Albums -->
+        <li *ngFor="let item of Albums" routerLink="/Songs"  (click)="IdThrower($event)">
+            <div>
+                <img [id]="item.id" class="cover" [src]="item.cover">
+                <img [id]="item.id" class="icon" [src]="item.cover">
+                <h2 [id]="item.id">{{item.title}}</h2>
+            </div>
+        </li>
+        <!-- ProgressBar Spinner -->
+        <mat-spinner *ngIf="ProgressBar"></mat-spinner>
+        <!--  If Load All Content It Appear-->
+        <h1 *ngIf="FullItem">All Albums Loaded</h1>
+
+    </ul>
+
+</div>

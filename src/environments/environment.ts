@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: true,
+  ApiUrl:'https://api.navacloud.ir/api/v1',
+  AlbumsId:4,
+  SongURL:'',
 };
 
 /*
